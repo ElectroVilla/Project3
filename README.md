@@ -2,6 +2,13 @@
 
 This application is provided to you as an alternative starter project if you do not wish to host your own code done in the previous courses of this nanodegree. The udagram application is a fairly simple application that includes all the major components of a Full-Stack web application.
 
+## Table of Contents
+* [UDACITY Supplied ReadMe](#Udacity)
+* [My Approch](#My_Approch)
+* [UDACITY Supplied ReadMe](##_Udacity)
+
+## UDACITY Supplied ReadMe
+
 ## Getting Started
 
 1. Clone this repo locally into the location of your choice.
@@ -63,3 +70,21 @@ The e2e tests are using Protractor and Jasmine.
 ## License
 
 [License](LICENSE.txt)
+
+
+## My_Approch
+I took the following steps to successfully deploy the project:
+
+1) Create a local PostgreSQL Database  
+2) Install and build both frontend and backend locally
+3) Create scripts locally
+4) Create .circleci/config.yml file
+5) Publish to GitHub
+6) Connected CircleCi to GitHub and make sute that CircleCI can really install dependencies and install / build both frontend and backend
+7) Created the AWS RDS database
+8) Created the AWS Elastic Beanstack 
+9) Created the AWS IAM
+10) Created AWS S3
+11) Updating my local files with the new credentials (each after its related step)
+12) pushing again to GitHub
+... and finally seeing the magic happens in CircleCI like a charm

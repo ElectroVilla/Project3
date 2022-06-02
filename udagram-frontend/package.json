@@ -10,7 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "chmod +x bin/deploy.sh && bin/deploy.sh"
+    "deploy": "chmod +x bin/deploy.sh && bin/deploy.sh",
+    "deployWin": "aws s3 cp --recursive --acl public-read ./www s3://minaantonudagram/"
   },
   "private": true,
   "dependencies": {
