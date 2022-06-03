@@ -11,7 +11,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy": "chmod +x bin/deploy.sh && bin/deploy.sh",
-    "deployWin": "aws s3 cp --recursive --acl public-read ./www s3://minaantonudagram/"
+    "deployWin": "aws s3 cp --recursive --acl public-read ./www s3://udagramfrontend/"
   },
   "private": true,
   "dependencies": {
