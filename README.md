@@ -1,13 +1,34 @@
+## Table of Contents
+* [My Approch](#My_Approch)
+* [UDACITY Supplied ReadMe](#Udagram)
+
+
+# My_Approch
+After finishing the course videos, I did the following actions: 
+
+1) Creating a test CircleCi project without deployment or any other sort of complication, the purpose was to test my capability of linking my GitHub account with CircleCi and test its behavior since this is the first time using CircleCi.
+
+2) Building the supplied project locally and solving its issues (PORT and DB_PORT) and many other
+
+3) Using the RDS service to host the Postgres Database, during this step I discovered that the instructor in the course videos ignored two important things: Database name setup and security setup, I was able to find that through the slack support channel   
+
+4) Using the Elastic Beanstalk service to host my backend files, this point was my worst point mainly because I use a windows machine so I had to find an equivalent command to be used locally as well as keep the original command for the remote servers 
+
+5) Using S3 to host my frontend files, this step was relatively fast I didn't face many troubles 
+
+6) Configure the CircleCi to do the complete automation and deployment of both backend and frontend project 
+
+and finally, it works with the S3 frontend link:
+http://udagramfrontend.s3-website-us-east-1.amazonaws.com/   
+
+GitHub Repo: 
+https://github.com/ElectroVilla/Project3
+
+More details are found in the docs folder
+
 # Udagram
 
 This application is provided to you as an alternative starter project if you do not wish to host your own code done in the previous courses of this nanodegree. The udagram application is a fairly simple application that includes all the major components of a Full-Stack web application.
-
-## Table of Contents
-* [UDACITY Supplied ReadMe](#Udacity)
-* [My Approch](#My_Approch)
-* [UDACITY Supplied ReadMe](##_Udacity)
-
-## UDACITY Supplied ReadMe
 
 ## Getting Started
 
