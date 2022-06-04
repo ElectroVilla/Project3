@@ -48,9 +48,9 @@ jobs:
             npm run frontend:test
 # workflows:
 # filters:
-    Branches:
-      only: 
-        -  main
+    # Branches:
+    #   only: 
+    #     -  main
 
       # - run:
       #     name: Deploy Back-end App
