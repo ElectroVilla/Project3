@@ -9,7 +9,7 @@ orbs:
   # aws-s3: circleci/aws-s3@3.0.0
   # different jobs are calles later in the workflows sections
 jobs:
-  build:
+  build-deploy:
     docker:
       # the base image can run most needed actions with orbs
       - image: "cimg/base:stable"
@@ -54,3 +54,11 @@ jobs:
       #     command: |
       #       npm run frontend:deploy
       
+workflows:
+  build-deploy-workflow:
+    jobs:
+      - build-deploy:
+        filters:
+          branches:
+            only:
+              - master 
