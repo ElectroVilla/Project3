@@ -37,7 +37,6 @@ jobs:
           name: Back-End Build
           command: |
             npm run backend:build
-
     - run:
           name: Back-End Test
           command: |
@@ -46,12 +45,6 @@ jobs:
           name: Front-End Test
           command: |
             npm run frontend:test
-# workflows:
-# filters:
-    # Branches:
-    #   only: 
-    #     -  main
-
       # - run:
       #     name: Deploy Back-end App
       #     command: |
