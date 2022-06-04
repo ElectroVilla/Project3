@@ -62,3 +62,7 @@ The folder screenshots contain several photos about the different stages of the 
 * pr13: Using the filter to show the successful builds of both projects (test and real) on CircleCi
 
 * pr14: The website is working ... 
+
+* pr15: Part 1 of the environment variables on CircleCi
+
+* pr16: Part 2 of the environment variables on CircleCi

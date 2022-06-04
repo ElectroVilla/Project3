@@ -8,6 +8,9 @@ orbs:
   eb: circleci/aws-elastic-beanstalk@2.0.1
   # aws-s3: circleci/aws-s3@3.0.0
   # different jobs are calles later in the workflows sections
+Branches:
+  only: 
+     -  main
 jobs:
   build:
     docker:
@@ -37,12 +40,23 @@ jobs:
           name: Back-End Build
           command: |
             npm run backend:build
-      - run:
-          name: Deploy Back-end App
+
+    - run:
+          name: Back-End Test
           command: |
-            npm run backend:deploy
+            npm run backend:test
       - run:
-          name: Deploy Front-end App
+          name: Front-End Test
           command: |
-            npm run frontend:deploy
+            npm run frontend:test
+
+
+      # - run:
+      #     name: Deploy Back-end App
+      #     command: |
+      #       npm run backend:deploy
+      # - run:
+      #     name: Deploy Front-end App
+      #     command: |
+      #       npm run frontend:deploy
       
