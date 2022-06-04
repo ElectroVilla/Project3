@@ -9,10 +9,7 @@ orbs:
   # aws-s3: circleci/aws-s3@3.0.0
   # different jobs are calles later in the workflows sections
 workflows:
-  filters:
-    Branches:
-      only: 
-        -  main
+  
 jobs:
   build:
     docker:
@@ -51,7 +48,10 @@ jobs:
           name: Front-End Test
           command: |
             npm run frontend:test
-
+filters:
+    Branches:
+      only: 
+        -  main
 
       # - run:
       #     name: Deploy Back-end App
