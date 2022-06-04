@@ -8,8 +8,6 @@ orbs:
   eb: circleci/aws-elastic-beanstalk@2.0.1
   # aws-s3: circleci/aws-s3@3.0.0
   # different jobs are calles later in the workflows sections
-# workflows:
-  
 jobs:
   build:
     docker:
@@ -48,7 +46,8 @@ jobs:
           name: Front-End Test
           command: |
             npm run frontend:test
-filters:
+# workflows:
+# filters:
     Branches:
       only: 
         -  main
