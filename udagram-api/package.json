@@ -15,7 +15,11 @@
     "buildWin": "tsc && copy \"src/config\" \"www/config\" && copy \".npmrc\" \"www/.npmrc\" && copy \"package.json\" \"www/package.json\" && cd www && zip -r Archive.zip . && cd ..",
     "buildWin1": "tsc && copy \"src/config\" \"www/config\" && copy \".npmrc\" \"www/.npmrc\" && copy \"package.json\" \"www/package.json\"",
     "deployOld": "eb deploy --profile default",
-    "deploy": "chmod +x bin/deploy.sh && bin/deploy.sh",
+    "init": "eb init $AWS_EB_APP --platform node.js --region us-east-1",
+    "create": "eb create --sample $AWS_EB_ENV",
+    "use": "eb use $AWS_EB_ENV",
+    "setenv": "chmod +x bin/deploy.sh && bin/deploy.sh",
+    "deploy": "eb deploy $AWS_EB_ENV",
     "deploy2": "npm run build && eb deploy",
     "testOrg": "echo \"Error: no test specified\" && exit 1",
     "test": "echo \"Dummy Test Passed\""

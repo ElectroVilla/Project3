@@ -16,13 +16,13 @@ jobs:
           node-version: '16.13'
       - checkout
       - aws-cli/setup
-      - run:
-          # Installing awsebcli to be able to deploy using eb command
-          name: "Installing awsebcli"
-          command: |
-            sudo apt-get update
-            sudo apt-get install python3-pip python-dev
-            sudo pip install awsebcli
+      # - run:
+      #     # Installing awsebcli to be able to deploy using eb command
+      #     name: "Installing awsebcli"
+      #     command: |
+      #       sudo apt-get update
+      #       sudo apt-get install python3-pip python-dev
+      #       sudo pip install awsebcli
       - eb/setup
       # install dependencies in both apps
       - run:
