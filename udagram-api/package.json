@@ -14,7 +14,8 @@
     "build": "npm run clean && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
     "buildWin": "tsc && copy \"src/config\" \"www/config\" && copy \".npmrc\" \"www/.npmrc\" && copy \"package.json\" \"www/package.json\" && cd www && zip -r Archive.zip . && cd ..",
     "buildWin1": "tsc && copy \"src/config\" \"www/config\" && copy \".npmrc\" \"www/.npmrc\" && copy \"package.json\" \"www/package.json\"",
-    "deploy": "eb deploy --profile default",
+    "deployOld": "eb deploy --profile default",
+    "deploy": "chmod +x bin/deploy.sh && bin/deploy.sh",
     "deploy2": "npm run build && eb deploy",
     "testOrg": "echo \"Error: no test specified\" && exit 1",
     "test": "echo \"Dummy Test Passed\""
