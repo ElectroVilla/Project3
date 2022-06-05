@@ -19,7 +19,8 @@
     "create": "eb create --sample $AWS_EB_ENV",
     "use": "eb use $AWS_EB_ENV",
     "setenv": "chmod +x bin/deploy.sh && bin/deploy.sh",
-    "deploy": "eb deploy $AWS_EB_ENV",
+    "deployStep": "eb deploy $AWS_EB_ENV",
+    "deploy": "npm run init && npm run create && npm run use && npm run setenv && npm run deployStep",
     "deploy2": "npm run build && eb deploy",
     "testOrg": "echo \"Error: no test specified\" && exit 1",
     "test": "echo \"Dummy Test Passed\""
